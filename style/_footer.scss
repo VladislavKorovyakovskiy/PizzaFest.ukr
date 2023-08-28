@@ -1,0 +1,109 @@
+@media (min-width: 600px) {
+    .site-footer {
+        background-color: $black-main;
+        color: #fff;
+        padding: 30px 0;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .footer-logo img {
+        width: 100px;
+        height: auto;
+    }
+
+    .footer-links ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-links li {
+        margin-bottom: 10px;
+    }
+
+    .footer-links a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s;
+        font-family: $font-content;
+    }
+
+    .footer-links a:hover {
+        color: $orangered;
+    }
+
+    .footer-contact {
+        flex: 1;
+        font-size: large;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+        border-top: 1px solid #555;
+        margin-top: 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-logo img {
+        width: 150px;
+        height: auto;
+    }
+
+    .footer-content {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-logo {
+        justify-self: right;
+        align-self: center;
+    }
+
+    .footer-links {
+        justify-self: left;
+    }
+
+    .footer-links a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s;
+        font-family: $font-content;
+        font-size: larger;
+    }
+
+    .footer-links ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-contact {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        padding-top: 20px;
+        border-top: 1px solid #555;
+        font-family: $font-content;
+        font-size: smaller;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        border-top: 1px solid #555;
+        margin-top: 20px;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,77 @@
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: $index_3;
+}
+
+.popup {
+    display: grid;
+    background-color: $backgrnd;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0.5rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 700px) {
+    .popup {
+        @media (max-width: 350px) {
+            width: 90%;
+        }
+
+        @media (min-width: 350px) and (max-width: 450px) {
+            width: 80%;
+
+            .product-container-overlay-clone .offer-description,
+            .product-container-overlay-clone #price {
+                font-size: $_1-1;
+            }
+
+            .product-container-overlay-clone .offer-title {
+                font-size: $_1-4;
+            }
+        }
+
+        @media (min-width: 450px) and (max-width: 700px) {
+            width: 60%;
+
+            .product-container-overlay-clone .offer-description,
+            .product-container-overlay-clone #price {
+                font-size: $_1-1;
+            }
+
+            .product-container-overlay-clone .offer-title {
+                font-size: $_1-4;
+            }
+        }
+    }
+}
+
+@media (min-width: 700px) {
+    .popup {
+        width: 420px;
+        height: auto;
+    }
+
+    .product-container-overlay-clone .offer-image {
+        width: 400px;
+        height: 400px;
+    }
+
+    .product-container-overlay-clone .offer-description,
+    .product-container-overlay-clone #price {
+        font-size: $_1-1;
+    }
+
+    .product-container-overlay-clone .offer-title {
+        font-size: $_1-4;
+    }
+}

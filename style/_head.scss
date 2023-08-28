@@ -1,0 +1,119 @@
+.header {
+    display: grid;
+    grid-area: header;
+    grid-template-columns: 30% max-content;
+    padding-left: $_1;
+    align-items: center;
+    grid-template-rows: 120px;
+    @media (max-width: 780px) {
+        grid-template-rows: 90px;
+    }
+    justify-content: start;
+    background-color: $black-main;
+}
+
+.header-logo img {
+        width: 150px;
+        height: auto;
+        @media (min-width: 780px) {
+            width: 200px;
+        }
+    }
+
+//Для телефона
+@media (max-width: 780px) {
+    .non-active {
+        padding: $_1 $_2 $_1-3 $_2;
+        background-color: $black-main;
+        display: none;
+        grid-gap: $_1;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        transition: right 0.2s ease-in-out;
+        z-index: $index_2;
+    }
+
+    #head-nav a {
+        text-decoration: none;
+        color: orangered;
+        background-color: $black-main;
+        font-family: $font-head;
+        font-size: $_2;
+    }
+}
+
+//Средний экран
+@media (min-width: 780px) {
+    .non-active {
+        padding: $_1 $_2 $_1-3 $_2;
+        background-color: $black-main;
+        grid-gap: $_1;
+        position: absolute;
+        right: 0;
+        z-index: $index_2;
+    }
+
+    #head-nav a {
+        text-decoration: none;
+        color: $orangered;
+        font-family: $font-head;
+        font-size: $_1-5;
+        padding: 0 0.5rem;
+        border-left: 2px solid $orangered;
+    }
+
+    
+
+    @media (min-width: 1280px) {
+        #head-nav a {
+            background-image: linear-gradient(to right, $orange, rgba(0, 123, 255, 0));
+            background-position: -150px 0;
+            background-repeat: no-repeat;
+            transition: (background-position 0.2s ease-in-out), (color 0.2s ease-in-out) ;
+        }
+
+        #head-nav a:hover {
+            background-position: 0 0;
+            color: whitesmoke;
+        }
+    }
+
+}
+
+.active {
+    display: grid;
+    // right: 0;
+}
+
+.animation-close {
+    animation-name: myAnimationClose;
+    animation-duration: 0.21s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes myAnimationClose {
+    0% {
+        transform: translate(0, 0)
+    }
+
+    100% {
+        transform: translate(350px, 0)
+    }
+}
+
+.animation-open {
+    animation-name: myAnimationOpen;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes myAnimationOpen {
+    0% {
+        transform: translate(150px, 0)
+    }
+
+    100% {
+        transform: translate(0, 0)
+    }
+}

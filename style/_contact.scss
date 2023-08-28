@@ -1,0 +1,72 @@
+.contact {
+    background-image: linear-gradient(to bottom,
+            $minblack 0%,
+            #ffffff00 80%,
+        );
+        @media (min-width: 700px) {
+            width: 80%;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+}
+
+.main p {
+    text-align: center;
+    font-family: $font-content;
+    padding: 15px;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-weight: 1000;
+
+    @media (min-width: 700px) {
+        font-size: larger;
+    }
+}
+
+.hr-contact {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    margin-bottom: 1.5rem;
+    border: none;
+    border-top: 0.3rem $orangered dotted;
+}
+
+iframe {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    box-shadow: 0 0 10px black;
+    margin-bottom: 1.5rem;
+
+    @media (max-width: 720px) {
+        height: 400px;
+    }
+}
+
+#callButton {
+    display: block;
+    // position: relative;
+    width: 70%;
+    max-width: 400px;
+    min-width: 300px;
+    height: 40px;
+    margin: 0 auto;
+    background-color: $orangered;
+    margin-bottom: 40px;
+    font-family: $font-head;
+    font-size: 1.2rem;
+
+    @media (max-width: 700px) {
+        font-size: 1rem;
+    }
+
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+}
+
+#callButton:hover {
+    background-color: rgb(255, 103, 48);
+}
